@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #101314;
+  --color-bone: #f4f3f1;
+  --color-flame: #e8503a;
+  --color-flame-hover: #f2735f;
+  --color-slate: #33474d;
+  --color-slate-mid: #4a6068;
+  --color-sage: #c3d5d2;
+  --color-sage-ink: #1e2c30;
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-flame);
+  }
+  a:hover {
+    color: var(--color-flame-hover);
+  }
+}
+
+@keyframes card1 {
+  0% { opacity: 0; transform: translate(-330px, -760px) rotate(-38deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(-268px, 26px) rotate(-19deg); }
+}
+@keyframes card2 {
+  0% { opacity: 0; transform: translate(-190px, -820px) rotate(26deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(-172px, -58px) rotate(-9.5deg); }
+}
+@keyframes card3 {
+  0% { opacity: 0; transform: translate(-40px, -880px) rotate(-30deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(-64px, 52px) rotate(4deg); }
+}
+@keyframes card4 {
+  0% { opacity: 0; transform: translate(120px, -800px) rotate(34deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(58px, -40px) rotate(-3deg); }
+}
+@keyframes card5 {
+  0% { opacity: 0; transform: translate(300px, -900px) rotate(-22deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(206px, 58px) rotate(11deg); }
+}
+@keyframes card6 {
+  0% { opacity: 0; transform: translate(400px, -700px) rotate(40deg); }
+  30% { opacity: 1; }
+  100% { opacity: 1; transform: translate(318px, -52px) rotate(20deg); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(34px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.7); }
+  70% { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sheen {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(320%) skewX(-18deg); }
+}
+@keyframes ping {
+  0% { transform: scale(0.4); opacity: 0.85; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
