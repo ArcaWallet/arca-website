@@ -1,6 +1,6 @@
 # Arca Wallet
 
-The website for Arca Wallet — an iOS app that keeps your gift cards, loyalty programs, and passes in one place.
+The website for Arca Wallet - an iOS app that keeps your gift cards, loyalty programs, and passes in one place.
 
 ## Tech stack
 
@@ -19,9 +19,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Project structure
 
-- `src/app/` — pages, root layout, and SEO files (`sitemap.ts`, `robots.ts`, `opengraph-image.tsx`)
-- `src/components/` — the page sections (Nav, Hero, Pricing, Footer, etc.)
-- `src/lib/constants.ts` — shared values (support email, App Store URL, site URL) — update these first when domain/links change
+- `src/app/` - pages, root layout, and SEO files (`sitemap.ts`, `robots.ts`, `opengraph-image.tsx`)
+- `src/components/` - the page sections (Nav, Hero, Pricing, Footer, etc.)
+- `src/lib/constants.ts` - shared values (support email, App Store URL, site URL) — update these first when domain/links change
 
 ## Deploying
 
