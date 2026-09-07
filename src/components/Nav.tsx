@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { APP_STORE_URL } from "@/lib/constants";
 
 const links = [
@@ -11,6 +13,10 @@ const links = [
 ];
 
 export function Nav() {
+  const pathname = usePathname();
+  const onHomepage = pathname === "/";
+  const onBlogIndex = pathname === "/blog";
+  const onBlog = pathname.startsWith("/blog");
   const [solid, setSolid] = useState(false);
   const [activeHref, setActiveHref] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +33,11 @@ export function Nav() {
   }, []);
 
   useEffect(() => {
+    if (!onHomepage) {
+      setActiveHref("");
+      return;
+    }
+
     const sections = links
       .map((link) => document.querySelector(link.href))
       .filter((el): el is Element => el !== null);
@@ -43,9 +54,25 @@ export function Nav() {
 
     sections.forEach((section) => io.observe(section));
     return () => io.disconnect();
-  }, []);
+  }, [onHomepage]);
 
   const showSolid = solid || menuOpen;
+  // The homepage and the blog index both have a dark section at the very
+  // top (Hero, and the blog's textured header band) — text/icons stay bone
+  // there. Every other page (like an individual blog post) starts on a
+  // light background, so text needs to read dark before the solid backdrop
+  // kicks in.
+  const hasDarkTop = onHomepage || onBlogIndex;
+  const useDarkText = !showSolid && !hasDarkTop;
+  const linkColorClass = (active: boolean) =>
+    useDarkText
+      ? active
+        ? "text-ink"
+        : "text-ink/55"
+      : active
+        ? "text-bone"
+        : "text-bone/65";
+  const linkHoverClass = useDarkText ? "hover:text-ink" : "hover:text-bone";
 
   return (
     <nav
@@ -56,7 +83,10 @@ export function Nav() {
       }`}
     >
       <div className="flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-[11px] text-inherit no-underline">
+        <a
+          href={onHomepage ? "#top" : "/#top"}
+          className="flex items-center gap-[11px] text-inherit no-underline"
+        >
           <Image
             src="/assets/arca-logo.png"
             alt="Arca Wallet"
@@ -64,7 +94,11 @@ export function Nav() {
             height={52}
             className="block h-[40px] w-[40px] md:h-[52px] md:w-[52px]"
           />
-          <span className="text-[15px] font-bold tracking-[-0.01em] text-bone md:text-[16px]">
+          <span
+            className={`text-[15px] font-bold tracking-[-0.01em] md:text-[16px] ${
+              useDarkText ? "text-ink" : "text-bone"
+            }`}
+          >
             Arca Wallet
           </span>
         </a>
@@ -73,14 +107,20 @@ export function Nav() {
           {links.map((link) => (
             <a
               key={link.href}
-              href={link.href}
-              className={`no-underline transition-colors hover:text-bone ${
-                activeHref === link.href ? "text-bone" : "text-bone/65"
-              }`}
+              href={onHomepage ? link.href : `/${link.href}`}
+              className={`no-underline transition-colors ${linkHoverClass} ${linkColorClass(
+                activeHref === link.href
+              )}`}
             >
               {link.label}
             </a>
           ))}
+          <Link
+            href="/blog"
+            className={`no-underline transition-colors ${linkHoverClass} ${linkColorClass(onBlog)}`}
+          >
+            Blog
+          </Link>
           <a
             href={APP_STORE_URL}
             className="rounded-full bg-flame px-[20px] py-[11px] font-bold text-white no-underline transition-colors hover:bg-bone hover:text-ink"
@@ -101,7 +141,9 @@ export function Nav() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
-            className="flex h-[32px] w-[32px] flex-none items-center justify-center rounded-full text-bone"
+            className={`flex h-[32px] w-[32px] flex-none items-center justify-center rounded-full ${
+              useDarkText ? "text-ink" : "text-bone"
+            }`}
           >
             {menuOpen ? (
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -121,7 +163,7 @@ export function Nav() {
           {links.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={onHomepage ? link.href : `/${link.href}`}
               onClick={() => setMenuOpen(false)}
               className={`no-underline transition-colors hover:text-bone ${
                 activeHref === link.href ? "text-bone" : "text-bone/65"
@@ -130,6 +172,15 @@ export function Nav() {
               {link.label}
             </a>
           ))}
+          <Link
+            href="/blog"
+            onClick={() => setMenuOpen(false)}
+            className={`no-underline transition-colors hover:text-bone ${
+              onBlog ? "text-bone" : "text-bone/65"
+            }`}
+          >
+            Blog
+          </Link>
         </div>
       )}
     </nav>

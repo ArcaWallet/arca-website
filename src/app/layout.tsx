@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Nav } from "@/components/Nav";
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -55,7 +54,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Nav />
         {children}
         <Analytics />
       </body>
