@@ -385,7 +385,7 @@ export function Hero() {
           className="mx-auto mt-[20px] max-w-[560px] animate-[rise_.8s_cubic-bezier(.16,1,.3,1)_both] text-[19px] leading-[1.5] text-bone/62"
           style={{ animationDelay: "2.05s" }}
         >
-          Gift cards, memberships, loyalty, passes. Everything with a barcode - scanned once, organized forever, and one tap away the moment you walk past the door.
+          Gift cards, memberships, loyalty, passes. Everything with a barcode - scanned once, organized forever, and one tap away the moment you walk out the door.
         </p>
         <div
           className="mt-[26px] flex animate-[rise_.8s_cubic-bezier(.16,1,.3,1)_both] flex-col items-center justify-center gap-[14px] md:flex-row md:gap-[16px]"
