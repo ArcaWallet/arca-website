@@ -135,8 +135,10 @@ export function BlogList({ posts }: { posts: PostSummary[] }) {
                         className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                       />
                       {post.tags && post.tags.length > 0 && (
-                        <div className="absolute top-[12px] left-[12px]">
-                          <TagPill tag={post.tags[0]} />
+                        <div className="absolute top-[12px] left-[12px] flex flex-wrap gap-[6px]">
+                          {post.tags.map((tag) => (
+                            <TagPill key={tag} tag={tag} />
+                          ))}
                         </div>
                       )}
                     </div>

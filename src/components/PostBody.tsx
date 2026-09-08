@@ -37,6 +37,26 @@ const components: PortableTextComponents = {
         {children}
       </a>
     ),
+    strong: ({ children }) => (
+      <strong className="font-bold text-ink">{children}</strong>
+    ),
+    em: ({ children }) => <em className="italic">{children}</em>,
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="mb-[20px] max-w-[65ch] list-disc space-y-[6px] pl-[24px] text-[17px] leading-[1.7] text-ink/85">
+        {children}
+      </ul>
+    ),
+    number: ({ children }) => (
+      <ol className="mb-[20px] max-w-[65ch] list-decimal space-y-[6px] pl-[24px] text-[17px] leading-[1.7] text-ink/85">
+        {children}
+      </ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li>{children}</li>,
+    number: ({ children }) => <li>{children}</li>,
   },
   types: {
     image: ({ value }) => (

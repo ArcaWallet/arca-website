@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
+import { media } from "sanity-plugin-media";
 import { dataset, projectId } from "./src/sanity/env";
 import { schema } from "./src/sanity/schemaTypes";
 
@@ -10,5 +11,5 @@ export default defineConfig({
   projectId,
   dataset,
   schema,
-  plugins: [structureTool()],
+  plugins: [structureTool(), media()],
 });
