@@ -44,7 +44,7 @@ export function BlogList({ posts }: { posts: PostSummary[] }) {
             Blog
           </h1>
           <p className="mt-[12px] max-w-[52ch] text-[15px] leading-relaxed text-bone/70 md:text-[15.5px]">
-            Product updates, design notes, and practical tips on gift cards and loyalty programs - from the team building Arca Wallet.
+            Product updates, design notes, and practical tips on gift cards and loyalty programs - from the team building Sense.
           </p>
 
           <div className="mt-[26px] flex flex-wrap gap-[8px]">

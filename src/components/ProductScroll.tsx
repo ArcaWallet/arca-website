@@ -14,7 +14,7 @@ import { Reveal } from "@/components/Reveal";
 const steps = [
   {
     heading: "One capture. Every field.",
-    body: "Launch the camera straight from the home screen. Front, back, barcode, brand - Arca compiles the whole card in a single click.",
+    body: "Launch the camera straight from the home screen. Front, back, barcode, brand - Sense compiles the whole card in a single click.",
     image: "/assets/screen-scan.png",
     alt: "Scanning a card",
   },

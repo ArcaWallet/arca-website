@@ -5,8 +5,8 @@ import { dataset, projectId } from "./src/sanity/env";
 import { schema } from "./src/sanity/schemaTypes";
 
 export default defineConfig({
-  name: "arca-wallet-blog",
-  title: "Arca Wallet Blog",
+  name: "sense-blog",
+  title: "Sense Blog",
   basePath: "/studio",
   projectId,
   dataset,

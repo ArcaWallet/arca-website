@@ -358,7 +358,7 @@ export function Hero() {
 
       <div className="relative max-w-[1000px] text-center">
         <Image
-          src="/assets/arca-logo.png"
+          src="/assets/sense-logo.png"
           alt=""
           width={104}
           height={104}

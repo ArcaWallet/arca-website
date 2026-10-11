@@ -9,7 +9,7 @@ export function Footer() {
 
       <Reveal className="relative">
         <h2 className="m-0 mx-auto max-w-[900px] text-[clamp(38px,6vw,86px)] leading-[0.94] tracking-[-0.05em] font-bold">
-          If it has a barcode, it belongs in Arca Wallet.
+          If it has a barcode, it belongs in Sense.
         </h2>
         <a
           href={APP_STORE_URL}
@@ -22,7 +22,7 @@ export function Footer() {
 
       <div className="relative mt-[56px] flex flex-wrap items-center justify-center gap-[20px] border-t border-white/28 pt-[22px] md:mt-[96px]">
         <span className="text-[14.5px] font-semibold tracking-[-0.01em]">
-          Arca Wallet LLC · © 2026
+          Makes Sense LLC · © 2026
         </span>
       </div>
     </footer>

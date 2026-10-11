@@ -68,7 +68,7 @@ export function Pricing() {
               Partner
             </div>
             <p className="text-[16px] leading-[1.5] text-sage-ink/75">
-              Sell discounted gift card packages at the point of purchase, distributed through Arca.
+              Sell discounted gift card packages at the point of purchase, distributed through Sense.
             </p>
           </div>
           <a

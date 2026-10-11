@@ -9,7 +9,7 @@ export function Proximity() {
         <span className="absolute h-[70px] w-[70px] animate-[ping_2.8s_ease-out_infinite] rounded-full bg-flame opacity-50 [animation-delay:1.4s]" />
         <div className="relative flex w-[260px] items-start gap-[12px] rounded-[20px] bg-bone/96 px-[16px] py-[14px] text-ink shadow-[0_20px_50px_rgba(0,0,0,.5)] md:w-[320px]">
           <Image
-            src="/assets/arca-logo.png"
+            src="/assets/sense-logo.png"
             alt=""
             width={40}
             height={40}
@@ -36,7 +36,7 @@ export function Proximity() {
           We make sure you use it.
         </h2>
         <p className="mt-[20px] max-w-[520px] text-[18px] leading-[1.55] text-bone/60">
-          A card you forget is a card you wasted. Arca watches the map, not you - a quiet nudge as you get close, tuned to whatever radius you set, and the barcode is one tap away.
+          A card you forget is a card you wasted. Sense watches the map, not you - a quiet nudge as you get close, tuned to whatever radius you set, and the barcode is one tap away.
         </p>
       </Reveal>
     </section>

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { APP_STORE_URL } from "@/lib/constants";
 
 const links = [
-  { href: "#system", label: "Why Arca" },
+  { href: "#system", label: "Why Sense" },
   { href: "#product", label: "Product" },
   { href: "#plans", label: "Plans" },
 ];
@@ -88,18 +88,18 @@ export function Nav() {
           className="flex items-center gap-[11px] text-inherit no-underline"
         >
           <Image
-            src="/assets/arca-logo.png"
-            alt="Arca Wallet"
+            src="/assets/sense-logo.png"
+            alt="Sense"
             width={52}
             height={52}
             className="block h-[40px] w-[40px] md:h-[52px] md:w-[52px]"
           />
           <span
-            className={`text-[15px] font-bold tracking-[-0.01em] md:text-[16px] ${
+            className={`relative top-[0.27em] font-brand text-[20px] leading-none md:text-[22px] ${
               useDarkText ? "text-ink" : "text-bone"
             }`}
           >
-            Arca Wallet
+            sense
           </span>
         </a>
 

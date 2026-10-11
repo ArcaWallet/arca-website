@@ -5,7 +5,7 @@ import { BlogList } from "@/components/BlogList";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "News and updates from Arca Wallet.",
+  description: "News and updates from Sense.",
 };
 
 export const revalidate = 60;

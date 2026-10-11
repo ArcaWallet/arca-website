@@ -18,7 +18,7 @@ export function BalanceTracking() {
           Every dollar accounted for.
         </h2>
         <p className="mt-[20px] mb-[32px] max-w-[460px] text-[18px] leading-[1.55] text-ink/60">
-          Log what you spend the second you spend it. Arca lets you keep a running balance, warns you before a card expires, and works with no signal at all.
+          Log what you spend the second you spend it. Sense lets you keep a running balance, warns you before a card expires, and works with no signal at all.
         </p>
         <div className="flex max-w-[440px] flex-col gap-[14px]">
           {rows.map((row) => (

@@ -1,5 +1,5 @@
 import { Hero } from "@/components/Hero";
-import { WhyArca } from "@/components/WhyArca";
+import { WhySense } from "@/components/WhySense";
 import { ProductScroll } from "@/components/ProductScroll";
 import { Stats } from "@/components/Stats";
 import { BalanceTracking } from "@/components/BalanceTracking";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhyArca />
+      <WhySense />
       <ProductScroll />
       <Stats />
       <BalanceTracking />

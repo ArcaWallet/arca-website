@@ -96,7 +96,7 @@ function LibraryCard({ transform, z }: { transform: string; z: number }) {
   );
 }
 
-export function WhyArca() {
+export function WhySense() {
   return (
     <section id="system" className="bg-ink px-[5vw] pt-[64px] pb-[56px] text-bone md:pt-[120px] md:pb-[110px]">
       <Reveal className="max-w-[900px]">
@@ -196,7 +196,7 @@ export function WhyArca() {
       >
         <div className="flex items-center gap-[26px]">
           <Image
-            src="/assets/arca-logo.png"
+            src="/assets/sense-logo.png"
             alt=""
             width={62}
             height={62}
@@ -207,7 +207,7 @@ export function WhyArca() {
               But every card on the right scans the same way.
             </div>
             <p className="mt-[8px] max-w-[560px] text-[16px] leading-[1.5] text-ink/60">
-              One standard, one scanner, one place they can all live. That is the entire idea behind Arca.
+              One standard, one scanner, one place they can all live. That is the entire idea behind Sense.
             </p>
           </div>
         </div>
