@@ -43,12 +43,13 @@ export function BalanceTracking() {
             background: "radial-gradient(circle, rgba(232,80,58,.14), transparent 62%)",
           }}
         />
-        <div className="relative overflow-hidden rounded-[44px] shadow-[0_40px_90px_rgba(16,19,20,.28),0_0_0_1px_rgba(16,19,20,.08)]">
+        <div className="relative drop-shadow-[0_32px_48px_rgba(16,19,20,.26)]">
           <Image
-            src="/assets/screen-detail.png"
+            src="/assets/screen-detail.webp"
             alt="Card detail with barcode and balance"
-            width={1206}
-            height={2622}
+            width={585}
+            height={1207}
+            sizes="(min-width: 768px) 360px, 280px"
             className="block h-auto w-full"
           />
         </div>

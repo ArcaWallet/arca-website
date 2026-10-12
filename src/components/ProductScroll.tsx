@@ -15,19 +15,19 @@ const steps = [
   {
     heading: "One capture. Every field.",
     body: "Launch the camera straight from the home screen. Front, back, barcode, brand - Sense compiles the whole card in a single click.",
-    image: "/assets/screen-scan.png",
+    image: "/assets/screen-scan.webp",
     alt: "Scanning a card",
   },
   {
     heading: "Two shelves, zero clutter.",
     body: "Gift Cards and Personal cards sit side by side, ordered by how close you are and how recently you used them. No brand silos, no ads, no lost cards.",
-    image: "/assets/screen-giftcards.png",
+    image: "/assets/screen-giftcards.webp",
     alt: "Gift cards shelf",
   },
   {
     heading: "Open, tap, scanned.",
     body: "The card you need is one tap from the lock screen, and the barcode fills the screen at full brightness for the scanner - with or without a signal.",
-    image: "/assets/screen-notification.png",
+    image: "/assets/screen-notification.webp",
     alt: "Lock screen notification",
   },
 ];
@@ -64,8 +64,8 @@ export function ProductScroll() {
                 {s.heading}
               </h3>
               <p className="mt-[14px] text-[16px] leading-[1.55] text-ink/60">{s.body}</p>
-              <div className="relative mx-auto mt-[24px] aspect-[1206/2622] w-[220px] overflow-hidden rounded-[36px] shadow-[0_30px_70px_rgba(16,19,20,.25),0_0_0_1px_rgba(16,19,20,.08)]">
-                <Image src={s.image} alt={s.alt} fill sizes="220px" className="object-cover" />
+              <div className="relative mx-auto mt-[24px] aspect-[585/1207] w-[220px] drop-shadow-[0_24px_36px_rgba(16,19,20,.22)]">
+                <Image src={s.image} alt={s.alt} fill sizes="220px" className="object-contain" />
               </div>
             </Reveal>
           ))}
@@ -116,15 +116,15 @@ export function ProductScroll() {
             </div>
           </div>
 
-          <div className="relative aspect-[1206/2622] w-[min(330px,25vw)] justify-self-center overflow-hidden rounded-[44px] shadow-[0_40px_90px_rgba(16,19,20,.28),0_0_0_1px_rgba(16,19,20,.08)]">
+          <div className="relative aspect-[585/1207] w-[min(330px,25vw)] justify-self-center drop-shadow-[0_32px_48px_rgba(16,19,20,.26)]">
             {steps.map((s, i) => (
               <div
                 key={s.image}
-                className={`absolute inset-0 overflow-hidden rounded-[44px] transition-[opacity,transform] duration-[.55s] ${
+                className={`absolute inset-0 transition-[opacity,transform] duration-[.55s] ${
                   step === i ? "scale-100 opacity-100" : "scale-[.96] opacity-0"
                 }`}
               >
-                <Image src={s.image} alt={s.alt} fill sizes="330px" className="object-cover" />
+                <Image src={s.image} alt={s.alt} fill sizes="330px" className="object-contain" />
               </div>
             ))}
           </div>

@@ -20,7 +20,9 @@ export function Footer() {
         <p className="mt-[16px] text-[14px] text-white/75">iOS · Free at launch</p>
       </Reveal>
 
-      <div className="relative mt-[56px] flex flex-wrap items-center justify-center gap-[20px] border-t border-white/28 pt-[22px] md:mt-[96px]">
+      <div className="relative mt-[56px] flex flex-wrap items-center justify-center gap-[14px] border-t border-white/28 pt-[22px] md:mt-[96px]">
+        <span className="relative top-[0.27em] font-brand text-[26px] leading-none">sense</span>
+        <span aria-hidden="true" className="h-[18px] w-px bg-white/45" />
         <span className="text-[14.5px] font-semibold tracking-[-0.01em]">
           Makes Sense LLC · © 2026
         </span>
